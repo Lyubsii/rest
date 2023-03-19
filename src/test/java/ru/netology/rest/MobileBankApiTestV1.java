@@ -74,4 +74,31 @@ class MobileBankApiTestV1 {
                 .statusCode(200)
                 .body("[0].currency", equalTo("RUB"));
     }
+
+    @Test
+    void currencyRurTest() {
+        // Given - When - Then
+        // Предусловия
+        given()
+                .baseUri("http://localhost:9999/api/v1")
+                .when()
+                .get("/demo/accounts")
+                .then()
+                .statusCode(200)
+                .body("[0].currency", equalTo("RUR"));
+    }
+
+    @Test
+    void shouldNegativeTest() {
+        // Given - When - Then
+        // Предусловия
+        given()
+                .baseUri("http://localhost:9999/api/v1")
+                .when()
+                .get("/demo/accounts")
+                .then()
+                .statusCode(400);
+    }
+
+
 }
