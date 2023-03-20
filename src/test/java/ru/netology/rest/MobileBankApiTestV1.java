@@ -49,6 +49,7 @@ class MobileBankApiTestV1 {
                 .body("[0].id", equalTo(1));
 
     }
+
     @Test
     void HeaderTest() {
         // Given - When - Then
@@ -73,7 +74,6 @@ class MobileBankApiTestV1 {
                 .then()
                 .statusCode(200)
                 .body("[0].currency", equalTo("RUB"));
+
     }
-
-
 }
