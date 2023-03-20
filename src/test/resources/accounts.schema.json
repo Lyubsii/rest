@@ -28,7 +28,8 @@
       },
       "currency": {
         "type": "string",
-        "currency": "RUB"
+        "currency": "RUB",
+        "currency": "USD"
       }
     }
   }
