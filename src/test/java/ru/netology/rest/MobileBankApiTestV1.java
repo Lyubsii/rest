@@ -74,6 +74,5 @@ class MobileBankApiTestV1 {
                 .then()
                 .statusCode(200)
                 .body("[0].currency", equalTo("RUB"));
-
     }
 }
