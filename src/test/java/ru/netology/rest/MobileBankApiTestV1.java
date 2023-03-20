@@ -49,6 +49,7 @@ class MobileBankApiTestV1 {
                 .body("[0].id", equalTo(1));
 
     }
+
     @Test
     void HeaderTest() {
         // Given - When - Then
@@ -73,7 +74,18 @@ class MobileBankApiTestV1 {
                 .then()
                 .statusCode(200)
                 .body("[0].currency", equalTo("RUB"));
+
     }
-
-
+    @Test
+    void currencyUsdTest() {
+        // Given - When - Then
+        // Предусловия
+        given()
+                .baseUri("http://localhost:9999/api/v1")
+                .when()
+                .get("/demo/accounts")
+                .then()
+                .statusCode(200)
+                .body("[0].currency", equalTo("USD"));
+    }
 }
