@@ -24,8 +24,7 @@
         "pattern": "^•• \\d{4}$"
       },
       "balance": {
-        "type": "integer",
-        "default": 0
+        "type": "integer"
       },
       "currency": {
         "type": "string",
